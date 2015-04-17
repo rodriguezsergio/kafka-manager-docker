@@ -3,7 +3,7 @@ FROM hseeberger/scala-sbt
 MAINTAINER Clement Laforet <sheepkiller@cultdeadsheep.org>
 
 ENV ZK_HOST localhost:2181
-ENV KM_REVISION 15c902dd2aad2696610b3a34f3f0905d3919903d
+ENV KM_REVISION 1102016c4c31eb33d4dd7690e25e72ec8b04d1ea
 
 RUN cd / && \
     git clone https://github.com/yahoo/kafka-manager && \
