@@ -9,10 +9,11 @@ RUN cd / && \
     git clone https://github.com/yahoo/kafka-manager && \
     cd /kafka-manager && \
     git checkout ${KM_REVISION} && \
-    sbt clean dist && \
-    unzip  -d / ./target/universal/kafka-manager-1.0-SNAPSHOT.zip
+    sbt clean dist
 
-WORKDIR /kafka-manager-1.0-SNAPSHOT
+RUN unzip  -d / /kafka-manager/target/universal/kafka-manager-1.2.0.zip
+
+WORKDIR /kafka-manager-1.2.0
 
 EXPOSE 9000
 ENTRYPOINT ["./bin/kafka-manager"]
